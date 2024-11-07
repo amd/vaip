@@ -71,11 +71,11 @@ FetchContent_Declare(
   URL ${DEP_URL_Boost}
   URL_MD5 ${DEP_SHA1_Boost}
   DOWNLOAD_EXTRACT_TIMESTAMP ON
-  CMAKE_ARGS -DBOOST_EXCLUDE_LIBRARIES=mp11
+  CMAKE_ARGS -DBOOST_EXCLUDE_LIBRARIES=mp11,headers
   OVERRIDE_FIND_PACKAGE
 )
 set(BOOST_INCLUDE_LIBRARIES config filesystem system graph interprocess)
-set(BOOST_EXCLUDE_LIBRARIES mp11)
+set(BOOST_EXCLUDE_LIBRARIES mp11 headers)
 set(Boost_VERBOSE TRUE)
 set(Boost_DEBUG TRUE)
 FetchContent_Declare(
