@@ -1450,10 +1450,17 @@ int vitisai_ep_on_run_start(
 }
 } // namespace vaip_core
 
-extern "C" VAIP_DLL_SPEC int vitisai_ep_on_run_start(
+extern "C" VAIP_DLL_SPEC int vitisai_ep_on_run_start_c(
     const std::vector<std::unique_ptr<vaip_core::ExecutionProvider>>& eps,
     const void* state,
     vaip_core::DllSafe<std::string> (*get_config_entry)(
         const void* state, const char* entry_name)) {
   return vaip_core::vitisai_ep_on_run_start(eps, state, get_config_entry);
+}
+
+extern "C" VAIP_DLL_SPEC int vitisai_ep_set_ep_dynamic_options_c(
+    const std::vector<std::unique_ptr<vaip_core::ExecutionProvider>>& eps,
+    const char* const* keys, const char* const* values, size_t kv_len) {
+  LOG(WARNING) << "not support set_ep_dynamic_options yet";
+  return 0;
 }
