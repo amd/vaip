@@ -44,7 +44,7 @@ option(ENABLE_PATTERN_ZOO "enable pattern zoo" ON)
 option(ENABLE_GRPAH_OPTIMIZATER "enable graph optimizer or not" ON)
 option(ENABLE_VITIS_AI_CUSTOM_OP "enable MHA ort custom op or not" ON)
 option(PACK_XCLBIN_PATH "The path of all xclbins packed" "")
-option(WIN24_BUILD "build for Win24" OFF)
+option(WIN24_BUILD "build for Win24" ON)
 
 if(NOT BUILD_PYTHON_EXT)
   set(USE_STATIC_PYTHON OFF)
