@@ -186,6 +186,7 @@ set(PACK_XCLBIN_PATH "" CACHE STRING "list of xclbin files")
 set(ENABLE_BUILD_VOE_WHEEL OFF CACHE BOOL "internal used only" FORCE)
 set(INSTALL_USER ON CACHE BOOL "internal used only" FORCE)
 set(ENABLE_XRT_SHARED_CONTEXT ON CACHE BOOL "internal used only" FORCE)
+set(DISABLE_LARGE_TXN_OPS ON CACHE BOOL "Disable large txn binaries in the package")
 ## make them available.
 find_package(unilog)
 find_package(Protobuf)
