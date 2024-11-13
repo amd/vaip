@@ -1,5 +1,6 @@
 ##
 ## Copyright (C) 2024 Advanced Micro Devices, Inc. All rights reserved.
+##  Licensed under the MIT License.
 ##
 
 from . import onnx_graph as ogm
