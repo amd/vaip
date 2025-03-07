@@ -8,6 +8,7 @@ project(
   vaip
   VERSION 1.0.0
   LANGUAGES C CXX)
+list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/deps.cmake)
 include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/vaip_common.cmake)
 option(USE_STATIC_PYTHON "link with static python or not" OFF)
